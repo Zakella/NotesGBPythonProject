@@ -1,2 +1,5 @@
+
+from controller import notes_controller
+
 if __name__ == "__main__":
-    pass
+    app = notes_controller.start_application()

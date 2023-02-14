@@ -15,6 +15,13 @@ class Note:
         return self.__header
 
     def get_creating_date(self):
-        return self.get_creating_date
+        return str(self.get_creating_date)
+
+    def __str__(self):
+        return f"Id {self.__id} \n" \
+               f"header :{self.__header} , \n" \
+               f"summary: {self.__summary},\n" \
+               f"created at: {self.__creating_date} \n"
+
 
 
