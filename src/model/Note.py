@@ -23,5 +23,12 @@ class Note:
                f"summary: {self.__summary},\n" \
                f"created at: {self.__creating_date} \n"
 
+    def in_dict(self):
+        new_data = {'id': self.get_id(),
+                    'header': self.get_header(),
+                    'summary': self.get_summary(),
+                    'created': self.get_creating_date()}
+        return new_data
+
 
 

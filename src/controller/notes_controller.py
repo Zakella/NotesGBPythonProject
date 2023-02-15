@@ -23,7 +23,7 @@ def start_application():
             header = input("Please enter header: ")
             summary = input("Please enter summary: ")
             note = Note(note_id, header, summary, str(date.today()))
-            note_service.add_note(note)
+            note_service.add_note(note.in_dict())
             note_id = note_id + 1
 
         elif command_input == "delete":
@@ -36,8 +36,8 @@ def start_application():
             note_id = int(input("Please enter note id: "))
             header = input("Please enter header: ")
             summary = input("Please enter summary: ")
-            note_service.delete_note(note_id)
             note = Note(note_id, header, summary, str(date.today()))
+            note_service.update_note(note_id, note.in_dict())
 
         elif command_input == "get all":
 
